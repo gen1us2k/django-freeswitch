@@ -15,7 +15,7 @@ class Cdr(models.Model):
     duration = models.IntegerField(null=True, blank=True, default=None)
     billsec = models.IntegerField(null=True, blank=True, default=None)
     hangup_cause = models.CharField(max_length=80, null=True, blank=True, default=None)
-    uuid = models.CharField(max_length=120, null=True, blank=True, default=None)
+    uuid = models.CharField(max_length=120, null=True, blank=True, default=None, primary_key=True)
     bleg_uuid = models.CharField(max_length=120, null=True, blank=True, default=None)
     accountcode = models.CharField(max_length=80, null=True, blank=True, default=None)
     company = models.CharField(max_length=80, null=True, blank=True, default=None)
