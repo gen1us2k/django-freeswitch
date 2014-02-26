@@ -1,10 +1,6 @@
 # coding=utf-8
-
 from django.db import models
-from django.contrib.contenttypes.models import ContentType
-from django.contrib.contenttypes import generic
-from django.core import urlresolvers
-import datetime
+
 
 class Cdr(models.Model):
     created = models.DateTimeField(auto_now_add=True)
