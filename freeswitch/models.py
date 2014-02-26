@@ -3,8 +3,6 @@ from django.db import models
 
 
 class Cdr(models.Model):
-    created = models.DateTimeField(auto_now_add=True)
-
     caller_id_name = models.CharField(max_length=50, null=True, blank=True, default=None)
     caller_id_number = models.CharField(max_length=50, null=True, blank=True, default=None)
     destination_number = models.CharField(max_length=50, null=True, blank=True, default=None)
