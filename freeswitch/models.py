@@ -20,3 +20,16 @@ class Cdr(models.Model):
 
     class Meta:
         db_table = 'fs_cdr'
+
+class users(models.Model):
+    userid = models.CharField(max_length=10, null=True, blank=True, default=None)
+    password = models.CharField(max_length=30, null=True, blank=True, default=None)
+    accountcode = models.CharField(max_length=10, null=True, blank=True, default=None)
+    user_context = models.CharField(max_length=20, null=True, blank=True, default=None)
+    effective_caller_id_name = models.CharField(max_length=30, null=True, blank=True, default=None)
+    effective_caller_id_number = models.CharField(max_length=20, null=True, blank=True, default=None)
+    callgroup = models.CharField(max_length=10, null=True, blank=True, default=None)
+    max_calls = models.IntegerField(max_length=2, null=True, blank=True, default=None)
+
+    class Meta:
+        db_table = 'fs_users'
