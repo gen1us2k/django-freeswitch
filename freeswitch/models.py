@@ -21,7 +21,7 @@ class Cdr(models.Model):
     class Meta:
         db_table = 'fs_cdr'
 
-class users(models.Model):
+class Users(models.Model):
     userid = models.CharField(max_length=10, null=True, blank=True, default=None)
     password = models.CharField(max_length=30, null=True, blank=True, default=None)
     accountcode = models.CharField(max_length=10, null=True, blank=True, default=None)
