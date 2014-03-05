@@ -22,9 +22,9 @@ class Cdr(models.Model):
         db_table = 'fs_cdr'
 
 class FsUser(models.Model):
-    userid = models.CharField(max_length=10, null=True, blank=True, default=None)
+    userid = models.CharField(max_length=30, null=True, blank=True, default=None)
     password = models.CharField(max_length=30, null=True, blank=True, default=None)
-    accountcode = models.CharField(max_length=10, null=True, blank=True, default=None)
+    accountcode = models.CharField(max_length=30, null=True, blank=True, default=None)
     user_context = models.CharField(max_length=20, null=True, blank=True, default=None)
     effective_caller_id_name = models.CharField(max_length=30, null=True, blank=True, default=None)
     effective_caller_id_number = models.CharField(max_length=20, null=True, blank=True, default=None)

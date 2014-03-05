@@ -11,9 +11,9 @@ class Migration(SchemaMigration):
         # Adding model 'users'
         db.create_table('fs_users', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('userid', self.gf('django.db.models.fields.CharField')(default=None, max_length=10, null=True, blank=True)),
+            ('userid', self.gf('django.db.models.fields.CharField')(default=None, max_length=30, null=True, blank=True)),
             ('password', self.gf('django.db.models.fields.CharField')(default=None, max_length=30, null=True, blank=True)),
-            ('accountcode', self.gf('django.db.models.fields.CharField')(default=None, max_length=10, null=True, blank=True)),
+            ('accountcode', self.gf('django.db.models.fields.CharField')(default=None, max_length=30, null=True, blank=True)),
             ('user_context', self.gf('django.db.models.fields.CharField')(default=None, max_length=20, null=True, blank=True)),
             ('effective_caller_id_name', self.gf('django.db.models.fields.CharField')(default=None, max_length=30, null=True, blank=True)),
             ('effective_caller_id_number', self.gf('django.db.models.fields.CharField')(default=None, max_length=20, null=True, blank=True)),
@@ -48,7 +48,7 @@ class Migration(SchemaMigration):
         },
         u'freeswitch.FsUser': {
             'Meta': {'object_name': 'FsUser', 'db_table': "'fs_users'"},
-            'accountcode': ('django.db.models.fields.CharField', [], {'default': 'None', 'max_length': '10', 'null': 'True', 'blank': 'True'}),
+            'accountcode': ('django.db.models.fields.CharField', [], {'default': 'None', 'max_length': '30', 'null': 'True', 'blank': 'True'}),
             'callgroup': ('django.db.models.fields.CharField', [], {'default': 'None', 'max_length': '10', 'null': 'True', 'blank': 'True'}),
             'effective_caller_id_name': ('django.db.models.fields.CharField', [], {'default': 'None', 'max_length': '30', 'null': 'True', 'blank': 'True'}),
             'effective_caller_id_number': ('django.db.models.fields.CharField', [], {'default': 'None', 'max_length': '20', 'null': 'True', 'blank': 'True'}),
@@ -56,7 +56,7 @@ class Migration(SchemaMigration):
             'max_calls': ('django.db.models.fields.IntegerField', [], {'default': 'None', 'max_length': '2', 'null': 'True', 'blank': 'True'}),
             'password': ('django.db.models.fields.CharField', [], {'default': 'None', 'max_length': '30', 'null': 'True', 'blank': 'True'}),
             'user_context': ('django.db.models.fields.CharField', [], {'default': 'None', 'max_length': '20', 'null': 'True', 'blank': 'True'}),
-            'userid': ('django.db.models.fields.CharField', [], {'default': 'None', 'max_length': '10', 'null': 'True', 'blank': 'True'})
+            'userid': ('django.db.models.fields.CharField', [], {'default': 'None', 'max_length': '30', 'null': 'True', 'blank': 'True'})
         }
     }
 
