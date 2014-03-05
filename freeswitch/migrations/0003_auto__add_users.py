@@ -20,7 +20,7 @@ class Migration(SchemaMigration):
             ('callgroup', self.gf('django.db.models.fields.CharField')(default=None, max_length=10, null=True, blank=True)),
             ('max_calls', self.gf('django.db.models.fields.IntegerField')(default=None, max_length=2, null=True, blank=True)),
         ))
-        db.send_create_signal(u'freeswitch', ['users'])
+        db.send_create_signal(u'freeswitch', ['FsUser'])
 
 
     def backwards(self, orm):
@@ -46,8 +46,8 @@ class Migration(SchemaMigration):
             'start_stamp': ('django.db.models.fields.DateTimeField', [], {'default': 'None', 'null': 'True', 'blank': 'True'}),
             'uuid': ('django.db.models.fields.CharField', [], {'default': 'None', 'max_length': '120', 'primary_key': 'True'})
         },
-        u'freeswitch.users': {
-            'Meta': {'object_name': 'users', 'db_table': "'fs_users'"},
+        u'freeswitch.FsUser': {
+            'Meta': {'object_name': 'FsUser', 'db_table': "'fs_users'"},
             'accountcode': ('django.db.models.fields.CharField', [], {'default': 'None', 'max_length': '10', 'null': 'True', 'blank': 'True'}),
             'callgroup': ('django.db.models.fields.CharField', [], {'default': 'None', 'max_length': '10', 'null': 'True', 'blank': 'True'}),
             'effective_caller_id_name': ('django.db.models.fields.CharField', [], {'default': 'None', 'max_length': '30', 'null': 'True', 'blank': 'True'}),
