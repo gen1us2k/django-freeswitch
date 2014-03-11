@@ -21,6 +21,7 @@ class Cdr(models.Model):
     class Meta:
         db_table = 'fs_cdr'
 
+
 class FsUser(models.Model):
     userid = models.CharField(max_length=30, null=True, blank=True, default=None)
     password = models.CharField(max_length=30, null=True, blank=True, default=None)
@@ -33,3 +34,40 @@ class FsUser(models.Model):
 
     class Meta:
         db_table = 'fs_users'
+
+
+class FsTier(models.Model):
+    queue = models.CharField(max_length=255, null=True, blank=True, default=None)
+    agent = models.CharField(max_length=255, null=True, blank=True, default=None)
+    state = models.CharField(max_length=255, null=True, blank=True, default=None)
+    level = models.IntegerField(default=1)
+    position = models.IntegerField(default=1)
+
+    class Meta:
+        db_table = 'fs_tiers'
+
+
+class FsAgent(models.Model):
+    name = models.CharField(max_length=255, null=True, blank=True, default=None)
+    system = models.CharField(max_length=255, null=True, blank=True, default=None)
+    uuid = models.CharField(max_length=255, null=True, blank=True, default=None)
+    type = models.CharField(max_length=255, null=True, blank=True, default=None)
+    contact = models.CharField(max_length=255, null=True, blank=True, default=None)
+    status = models.CharField(max_length=255, null=True, blank=True, default=None)
+    state = models.CharField(max_length=255, null=True, blank=True, default=None)
+    max_no_answer = models.IntegerField(default=0)
+    wrap_up_time = models.IntegerField(default=0)
+    reject_delay_time = models.IntegerField(default=0)
+    busy_delay_time = models.IntegerField(default=0)
+    no_answer_delay_time = models.IntegerField(default=0)
+    last_bridge_start = models.IntegerField(default=0)
+    last_bridge_end = models.IntegerField(default=0)
+    last_offered_call = models.IntegerField(default=0)
+    last_status_change = models.IntegerField(default=0)
+    no_answer_count = models.IntegerField(default=0)
+    calls_answered = models.IntegerField(default=0)
+    talk_time = models.IntegerField(default=0)
+    ready_time = models.IntegerField(default=0)
+
+    class Meta:
+        db_table = 'fs_agents'
