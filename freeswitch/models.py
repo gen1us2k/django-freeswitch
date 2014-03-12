@@ -38,7 +38,7 @@ class FsUser(models.Model):
 
 class FsTier(models.Model):
     queue = models.CharField(max_length=255, null=True, blank=True, default=None)
-    agent = models.CharField(max_length=255, null=True, blank=True, default=None)
+    agent = models.CharField(max_length=255, blank=True, default=None, primary_key=True)
     state = models.CharField(max_length=255, null=True, blank=True, default=None)
     level = models.IntegerField(default=1)
     position = models.IntegerField(default=1)
@@ -48,7 +48,7 @@ class FsTier(models.Model):
 
 
 class FsAgent(models.Model):
-    name = models.CharField(max_length=255, null=True, blank=True, default=None)
+    name = models.CharField(max_length=255, blank=True, default=None, primary_key=True)
     system = models.CharField(max_length=255, null=True, blank=True, default=None)
     uuid = models.CharField(max_length=255, null=True, blank=True, default=None)
     type = models.CharField(max_length=255, null=True, blank=True, default=None)
