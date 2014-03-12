@@ -44,7 +44,7 @@ class FsTier(models.Model):
     position = models.IntegerField(default=1)
 
     class Meta:
-        db_table = 'fs_tiers'
+        db_table = 'tiers'
 
 
 class FsAgent(models.Model):
@@ -70,4 +70,4 @@ class FsAgent(models.Model):
     ready_time = models.IntegerField(default=0)
 
     class Meta:
-        db_table = 'fs_agents'
+        db_table = 'agents'
